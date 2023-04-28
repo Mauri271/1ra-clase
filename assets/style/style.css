@@ -1,0 +1,300 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:'Courier New', Courier, monospace;
+    background-color: #111;
+    border: 1px solid rgb(8, 102, 209);
+    border-radius: 5px;
+}
+
+/* Navbar Style */
+
+nav{  
+  margin: 0.3rem;
+}
+
+.logo{
+    height: 2.5rem;
+    width: 4rem;
+}
+
+a, input, .navbar-brand{
+    color: rgb(8, 102, 209) !important ;
+}
+
+.navbar, .navbar-toggler{
+    border: 1px solid rgb(8, 102, 209);
+    border-radius: 5px;
+}
+
+.navbar-toggler-icon{
+    background-image: url(../img/Logo\ Amazing\ Events.png);
+    width: 3rem;
+    height: 3rem;
+}
+
+.bg-dark{
+    background-color: rgba(18, 15, 15, 0.884) !important;
+}
+
+.collapse{
+    margin: 0.5rem 0 0 0.5rem !important;
+}
+
+.navbar-collapse{
+    gap: 1.5rem;
+}
+
+ul{
+    gap: 0.5rem 1rem;
+}
+
+li{
+    font-size: 1rem;
+    font-weight: 600 !important;
+    text-shadow: 1px 1px 1px rgb(19, 5, 5), 0 0 1em blue, 0 0 0.2em blue;
+}
+
+li:hover{
+    background-color: #007bff;;
+    color: #000;
+    max-width: fit-content;
+    border: 1px solid rgba(0, 0, 0, 0.587);
+    border-radius: 10px;
+    transition: 3s;
+}
+
+/* carousel main */
+
+.carouselSection{
+  margin: 0.3rem;  
+  border: 1px solid rgb(8, 102, 209);
+  border-radius: 5px;
+}
+
+.d-block{
+    height: 38vh;
+    object-fit: cover;
+    object-position: 0 20%;
+}
+
+.imgTopChange{
+    object-position: 0 45% !important;
+}
+
+.carousel-inner h1{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:rgb(8, 102, 209);
+    text-shadow: 1px 1px 1px rgb(19, 5, 5), 0 0 1em blue, 0 0 0.2em blue;
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    z-index: 1;
+    margin: auto;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+/* form */
+
+
+h3{
+  font-size: 1.3rem;
+  text-align: center;    
+  color:rgb(8, 102, 209);
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  text-shadow: 1px 1px 1px rgb(19, 5, 5), 0 0 1em blue, 0 0 0.2em blue;
+  text-decoration: underline;
+}
+
+form {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid rgb(8, 102, 209);
+    border-radius: 5px;
+  }
+
+  
+  .formSEction{
+    padding: 0.3rem;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    color:rgb(8, 102, 209);
+    margin-top: 0.5rem;
+  }
+  
+  input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  input[type="text"] {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 5px;
+    width: 150px;
+  }
+  
+  button[type="submit"] {
+    background-color: #007bff;
+    font-weight: 500;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: rgba(119, 128, 189, 0.475);
+  }
+  
+  form {
+    box-shadow: 0px 0px 10px #000;
+  }
+  
+  input[type="text"], 
+  button[type="submit"] {
+    background-color: #111;
+    color: #007bff;
+  }
+  
+  input[type="text"]::placeholder {
+    font-weight: 500;
+    color: #007bff;
+  }
+
+  /* cards home */
+
+  .card {
+    width: 20rem;
+    height: 29rem;    
+    border: 1px solid rgb(8, 102, 209);
+    border-radius: 8px;
+  }
+
+  .card-img-top{
+    height: 12rem;
+  }
+
+  .card-body{
+    gap: 0.5rem;
+    font-weight: 400;
+    background-color: #01458da1;
+  }
+
+
+  h5{
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  .transformedButton{
+    transform: translateY(3rem);
+  }
+
+  .transformedButton2{
+    transform: translateY(1.5rem);
+  }
+  
+
+  /* footer */
+
+  footer{
+    padding: 1rem;
+    margin: 0.3rem;
+    align-items: center;
+    height: 5rem;      
+    border: 1px solid rgb(8, 102, 209);
+    border-radius: 8px;
+    flex-wrap: wrap;
+  }
+
+  #divFooter a{
+    margin: 0.5rem;
+  }
+
+  /* contactForm */
+
+  input[type="text"], input[type="email"], textarea[id="mensaje"], input[type="submit"]{
+    background-color: #111;
+    color: #007bff;
+    border: 1px solid rgb(8, 102, 209);
+    border-radius: 5px;
+  }
+
+  input[type="text"], input[type="email"]{
+    width: 25vw; 
+    height: 2rem;
+  }
+
+  input[type="submit"]{
+    
+    width: 5rem;
+  }
+
+  input[type="submit"]:hover{
+    background-color:#007bff;
+    color: #000;
+    text-shadow:  1px 1px 1px rgb(19, 5, 5), 0 0 1em blue, 0 0 0.2em blue;
+  }
+
+  #contactForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  textarea[id="mensaje"] {
+    width: 80vw;
+  }
+
+  /* Stats tabla */
+
+  .table{
+    margin: 1rem;
+    width: 80%;    
+    border: 1px solid rgb(8, 102, 209);
+    border-radius: 5px;
+  }
+
+  th,tr{
+    color: #007bff;
+  }
+  
+  .logo1{
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid rgb(8, 102, 209);
+    border-radius: 15px;
+  }
+
+
+  /* details */
+
+  #bodyDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/Logo\ Amazing\ Events.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.91;
+  }

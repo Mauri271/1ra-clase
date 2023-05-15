@@ -60,15 +60,7 @@ function filteredByTitle(events) {
 //-------checkboxlistener and categorie array------
 checkboxes.addEventListener(`change`, () => {
 
-
   doubleFilter()
-
-  // const cardsFilteredByCategory = filterCardsByCategory(data.events, checkedCheckbox)
-  // console.log(cardsFilteredByCategory)
-
-  // cardPrinter(cardsFilteredByCategory, article)
-  
- 
 
 });
 

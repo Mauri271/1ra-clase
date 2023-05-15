@@ -8,8 +8,6 @@ const events = data.events.find((event => event._id == idParams))
 
 document.title = `Details / ${events.name }`
 
-console.log(events)
-
 detailsContainer.innerHTML = `<div class="cardDetails mb-3 d-flex" style="max-width:1080px;">
 <div class="row g-0  d-flex align-items-center">
   <div class="col-md-4">

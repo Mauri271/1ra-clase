@@ -16,7 +16,7 @@ function cardCreator (card){
 
     function cardPrinter(list, where) {
         let template = ""
-
+        
         for(let element of list){
             if(element.date > data.currentDate){
                 template += cardCreator(element)
@@ -56,16 +56,8 @@ function filteredByTitle(events) {
 //-------checkboxlistener and categorie array------
 checkboxes.addEventListener(`change`, () => {
 
-
   doubleFilter()
-
-  // const cardsFilteredByCategory = filterCardsByCategory(data.events, checkedCheckbox)
-  // console.log(cardsFilteredByCategory)
-
-  // cardPrinter(cardsFilteredByCategory, article)
   
- 
-
 });
 
 

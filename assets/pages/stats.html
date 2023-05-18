@@ -74,86 +74,40 @@
             <span class="visually-hidden">Next</span>
           </button>
         </div>
-      <section>  
+      </section>  
 
-        <section class="tableSection d-flex justify-content-center flex-col pb-2 pt-2">
+        <section class="tableSection d-flex flex-column align-items-center pb-2 pt-2 container">
+
+       
+          <div id="tableStatics">
+            <h3>Event Statics</h3>
           <table class="table">
             <thead>
-              <th colspan="6">Event Statics</th>
               <tr>
-                <th colspan="2" scope="col">Events with the highest percentage of attendace</th>
-                <th colspan="2" scope="col">Events with the lowest percentage of attendace</th>
-                <th colspan="2" scope="col">Event with larger capacity</th>
+                <th colspan ="2" scope="col">Events with the highest percentage of attendace</th>
+                <th colspan ="2" scope="col">Events with the lowest percentage of attendace</th>
+                <th colspan ="2" scope="col">Event with larger capacity</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td colspan="2">a</td>
-                <td colspan="2">b</td>
-                <td colspan="2">c</td>
-              </tr>
-              <tr>
-                <td colspan="2">a</td>
-                <td colspan="2">b</td>
-                <td colspan="2">c</td>
-              </tr>
-              <tr>
-                <td colspan="2">a</td>
-                <td colspan="2">b</td>
-                <td colspan="2">c</td>
-              </tr>
-            </tbody>
-            <thead>
-              <th colspan="6">Upcoming Events by category</th>
-              <tr>
-                <th colspan="2" scope="col">categories</th>
-                <th colspan="2" scope="col">Revenues</th>
-                <th colspan="2" scope="col">Percentage of attendance</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td colspan="2">a</td>
-                <td colspan="2">b</td>
-                <td colspan="2">c</td>
-              </tr>
-              <tr>
-                <td colspan="2">a</td>
-                <td colspan="2">b</td>
-                <td colspan="2">c</td>
-              </tr>
-              <tr>
-                <td colspan="2">a</td>
-                <td colspan="2">b</td>
-                <td colspan="2">c</td>
-              </tr>
-            </tbody>
-            <thead>
-              <th colspan="6">Past Events by category</th>
-              <tr>
-                <th colspan="2" scope="col">Categories</th>
-                <th colspan="2" scope="col">Revenues</th>
-                <th colspan="2" scope="col">Percentage of attendance</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td colspan="2">a</td>
-                <td colspan="2">b</td>
-                <td colspan="2">c</td>
-              </tr>
-              <tr>
-                <td colspan="2">a</td>
-                <td colspan="2">b</td>
-                <td colspan="2">c</td>
-              </tr>
-              <tr>
-                <td colspan="2">a</td>
-                <td colspan="2">b</td>
-                <td colspan="2">c</td>
+                <td colspan ="2" id="highestAttendance"></td>
+                <td colspan ="2" id="lowestAttendace"></td>
+                <td colspan ="2" id="highestCapacity"></td>
               </tr>
             </tbody>
           </table>
+        </div>
+
+          <div id="tableUpcoming" class="m-3 d-flex flex-column">
+            <h3>Upcoming events statistics by category</h3>
+          </div>
+          
+  
+          <div id="tablePast" class="m-3 d-flex flex-column">
+            <h3>Past events statistics by category</h3>
+          </div>
+
           </section>
 
           <footer class="d-flex flex-row justify-content-between">
@@ -170,5 +124,6 @@
     
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="../JSpages/stats.js"></script>
 </body>
 </html>

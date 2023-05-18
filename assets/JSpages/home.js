@@ -1,4 +1,49 @@
 let article = document.getElementById("cardsArticle");
+const searchBar = document.getElementById("searchBar");
+const checkboxes = document.getElementById("form");
+
+
+//Task4
+
+let dataFromJson;
+
+fetch(`https://mindhub-xj03.onrender.com/api/amazing`)
+.then(data => data.json())
+.then (response => {
+  dataFromJson = response
+  console.log(dataFromJson)
+
+  //-----categories new array --------------
+const categories = dataFromJson.events
+.map((event) => event.category)
+.filter((category, index, array) => array.indexOf(category) == index);
+
+
+    ///-----checkbox printer----
+const reduceFunction = (acumulador, actualElement) => {
+  return (acumulador += `        <label>
+  <input type="checkbox" value="${actualElement}"> ${actualElement}
+</label>`);
+};
+
+const reducedCheckboxes = categories.reduce(reduceFunction, ``);
+
+checkboxes.innerHTML = reducedCheckboxes;
+
+//cardprinter
+  cardPrinter(dataFromJson.events, article)
+  
+
+
+//-------checkboxlistener and categorie array------
+checkboxes.addEventListener(`change`, () => {
+  doubleFilter();
+  
+});
+})
+.catch(err => console.log(err))
+
+
 
 function cardCreator(card) {
   return `<div class="card">
@@ -30,18 +75,11 @@ function cardPrinter(data, where) {
   where.innerHTML = template;
 }
 
-cardPrinter(data.events, article);
-
 //-----------------------------------------------------------------------------------------
 
 // codigo task3
 
 //------manejo de DOM-----
-const searchBar = document.getElementById("searchBar");
-const checkboxes = document.getElementById("form");
-
-console.log(searchBar);
-console.log(checkboxes);
 
 //-------search bar listener-------
 searchBar.addEventListener(`input`, () => {
@@ -57,27 +95,9 @@ function filteredByTitle(events) {
   );
 }
 
-//-------checkboxlistener and categorie array------
-checkboxes.addEventListener(`change`, () => {
-  doubleFilter();
-});
-
-//-----categories new array --------------
-const categories = data.events
-  .map((event) => event.category)
-  .filter((category, index, array) => array.indexOf(category) == index);
 
 
-///-----checkbox printer----
-const reduceFunction = (acumulador, actualElement) => {
-  return (acumulador += `        <label>
-  <input type="checkbox" id="" value="${actualElement}"> ${actualElement}
-</label>`);
-};
 
-const reducedCheckboxes = categories.reduce(reduceFunction, ``);
-
-checkboxes.innerHTML = reducedCheckboxes;
 
 ///----function to filter cards by category
 
@@ -94,7 +114,7 @@ function doubleFilter() {
   const checkedCheckbox = Array.from(
     document.querySelectorAll(`input[type="checkbox"]:checked`)
   ).map((element) => element.value);
-  let inputFunction = filteredByTitle(data.events, searchBar.value);
+  let inputFunction = filteredByTitle(dataFromJson.events, searchBar.value);
   let checkFunction = filterCardsByCategory(inputFunction, checkedCheckbox);
   cardPrinter(checkFunction, article);
 }

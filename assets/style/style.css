@@ -141,10 +141,20 @@ form {
     margin-bottom: 10px;
     color:rgb(8, 102, 209);
     margin-top: 0.5rem;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    padding: 5px;    
+    cursor: pointer;
+  }
+
+  label:hover{
+    background-color: #007bff;
+    color: #222;
   }
   
   input[type="checkbox"] {
     margin-right: 5px;
+    
   }
   
   input[type="text"] {
@@ -269,27 +279,23 @@ form {
 
   /* Stats tabla */
 
-  .table{
-    margin: 1rem;
-    width: 80%;    
-    border: 1px solid rgb(8, 102, 209);
-    border-radius: 5px;
-  }
+table{
+  border: 1px solid red;
+  background-color: #4280c471;
+  border: 1px solid rgb(8, 102, 209);
+  border-radius: 5px;    
+  text-align: center;
+}
 
-  th,tr{
+  th,tr,td{
     color: #007bff;
+    border: 1px solid #007bff;
   }
 
   th{
-    font-size: larger;
+    border: 1px solid #007bff;
   }
-  
-  .logo1{
-    width: 2rem;
-    height: 2rem;
-    border: 2px solid rgb(8, 102, 209);
-    border-radius: 15px;
-  }
+ 
 
 
   /* details */
@@ -305,9 +311,9 @@ form {
   .cardDetails{ 
     border: 1px solid rgb(8, 102, 209);
     border-radius: 8px;
-    font-weight:900;
+    font-weight:bold;
     background-color: #0558b0c4;
-    color: #000;
+    color: #171515;
   }
 
 
@@ -338,4 +344,11 @@ transform: rotate(360deg);
   .btn-primary:hover{
     -webkit-transform:scale(0.9);transform:scale(1.1);
     overflow:hidden;
+  }
+
+  .logo1{
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid rgb(8, 102, 209);
+    border-radius: 15px;
   }
